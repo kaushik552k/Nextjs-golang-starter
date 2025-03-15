@@ -1,16 +1,17 @@
-## Powered By CodeEaseX 🚀
+## Crafted & Powered By Kaushik 🚀
 
 ---
 
 ### ⬇️ Installation
 
 ```sh
-npx https://github.com/Hrithik450/mern-launcher
+npx https://github.com/kaushik552k/Nextjs-golang-starter
 ```
 
 ### 🚀 Introduction
 
-mern-launcher automates setting up frontend and backend folders, installing dependencies, and initializing servers, making development faster and hassle-free.
+nextjs-golang-starter automates setting up a Next.js frontend (with JavaScript or TypeScript and optional Tailwind CSS) and a Golang backend, installs dependencies, and initializes servers—making development faster and hassle-free.
+
 
 ---
 
@@ -19,10 +20,10 @@ mern-launcher automates setting up frontend and backend folders, installing depe
 - ✅ Automatic Folder Setup.
 - ✅ Installs Dependencies Automatically.
 - ✅ Fast and Efficient Setup.
-- ✅ Built-in Routing System.
-- ✅ Built-in Tailwind CSS Configuration.
-- ✅ Built-in Redux Toolkit with Store and Slices.
-- ✅ Supports React.js, Node.js, Express.js, Tailwind CSS, MongoDB.
+- ✅ Supports Next.js with JavaScript or TypeScript.
+- ✅ Optional Tailwind CSS Configuration.
+- ✅ Minimal Golang Backend Setup.
+- ✅ Clear and Prompted Project Initialization.
 
 📜 **License**: MIT License
 
@@ -35,21 +36,24 @@ This project is licensed under the MIT License.
 To create a new project, run:
 
 ```sh
-npx https://github.com/Hrithik450/mern-launcher
+npx https://github.com/kaushik552k/Nextjs-golang-starter
 ```
 
 You will be prompted with:
 
-- You can enter '.' for current dir, '..' to go back one level, or a full path for a custom location
-- Enter the directory: ..
-- Enter project name: Demo
+- You can enter . for current dir, .. to go back one level, or a full path for a custom location.
+- Enter the directory: (e.g., ..)
+- Enter project name: (e.g., Demo)
+- Choose frontend language: (JavaScript or TypeScript)
+- Do you want to include Tailwind CSS? (Yes/No)
+
 
 This will generate:
 
 ```sh
 Demo/
-├── frontend/ (React.js setup)
-└── backend/ (Express/Node.js setup)
+├── frontend/  (Next.js project)
+└── backend/   (Golang project)
 ```
 
 ### 📦 Module Type Selection
@@ -65,15 +69,19 @@ esm
 ### 🎨 Select a Framework
 
 ```sh
-React
+Next.js
 ```
 
 ### 🛠 Select a Variant
 
 ```sh
-JavaScript
+JavaScript or TypeScript (depending on your choice)
 ```
 
+### 🛠 Tailwind CSS option
+```sh
+Do you want to include Tailwind CSS? (Yes/No)
+```
 ---
 
 ### 📂 Project Structure
@@ -82,58 +90,26 @@ JavaScript
 
 ```sh
 frontend/
-│── public/
-│── src/
-│ ├── assets/
-│ ├── components/
-│ │ ├── common/
-│ │ ├── layout/
-│ │ ├── home/
-│ ├── features/
-│ │ ├── authSlice.jsx
-│ ├── hooks/
-│ ├── pages/
-│ │ ├── Home.jsx
-│ ├── routes/
-│ │ ├── PrivateRoute.jsx
-│ │ ├── AppRoute.jsx
-│ │ ├── AdminRoute.jsx
-│ │ ├── index.jsx
-│ ├── store/
-│ ├── utils/
-│ ├── App.jsx
-│ ├── main.jsx
-│ ├── App.css
-│ ├── index.css
-│── .env
-│── package.json
-│── README.md
+│── pages/
+│   └── index.(js|tsx)         # Main entry point (TypeScript if selected, else JavaScript)
+│── public/                    # Static assets
+│── styles/
+│   └── globals.css            # Tailwind CSS directives (if enabled)
+│── package.json               # Frontend dependencies and scripts
+│── next.config.js             # Next.js configuration
+│── tsconfig.json              # TypeScript configuration (if selected)
+│── next-env.d.ts              # TypeScript definitions (if selected)
+│── README.md                  # Frontend documentation
 ```
 
 ### **Backend Folder Structure**
 
 ```sh
 backend/
-│── src/
-│ ├── config/
-│ │ ├── db.js
-│ │ ├── config.env
-│ ├── controllers/
-│ │ ├── authController.js
-│ ├── middlewares/
-│ │ ├── authMiddleware.js
-│ │ ├── errorHandler.js
-│ ├── models/
-│ │ ├── User.js
-│ ├── routes/
-│ │ ├── authRoutes.js
-│ ├── utils/
-│ │ ├── generateToken.js
-│ │ ├── catchAsync.js
-│ ├── index.js
-│── .env
-│── package.json
-│── README.md
+│── go.mod                     # Go module file
+│── main.go                    # Minimal Golang server setup
+│── README.md                  # Backend documentation
+
 ```
 
 ---
@@ -146,6 +122,7 @@ backend/
 
 ```sh
 cd Demo/frontend
+npm install
 npm run dev
 ```
 
@@ -153,7 +130,8 @@ npm run dev
 
 ```sh
 cd Demo/backend
-npm run dev
+go mod tidy
+go run main.go
 ```
 
-✅ **Basic MERN platform setup completed successfully!**
+**✅ Basic Next.js and Golang platform setup completed successfully!**
